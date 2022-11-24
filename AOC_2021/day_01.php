@@ -8,10 +8,8 @@ $changes = 0;
 //print_r(array_count_values($nums));
 
 foreach($nums as $number => $_){
-    if(isset($nums[$number+3])) {
-        if ((intval($nums[$number]) + intval($nums[$number+1]) + intval($nums[$number+2]))  < (intval($nums[$number+1]) + intval($nums[$number+2]) + intval($nums[$number+3]))) {
-            $changes++;
-        }
+    if($_ < $nums[$number+1]){
+        $changes++;
     }
 }
 

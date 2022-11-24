@@ -5,16 +5,18 @@ $nums = explode("\n", $file);
 
 $horizontal = 0;
 $depth = 0;
+$aim = 0;
 
 foreach($nums as $number => $_){
     if (substr($nums[$number], 0, -2) == "forward") {
         $horizontal += intval(substr($nums[$number],-1));
+        $depth += $aim * intval(substr($nums[$number],-1));
     }
     if (substr($nums[$number], 0, -2) == "up") {
-        $depth -= intval(substr($nums[$number],-1));
+        $aim -= intval(substr($nums[$number],-1));
     }
     if (substr($nums[$number], 0, -2) == "down") {
-        $depth += intval(substr($nums[$number],-1));
+        $aim += intval(substr($nums[$number],-1));
     }
 }
 
