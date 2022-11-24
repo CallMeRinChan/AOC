@@ -1,6 +1,6 @@
 <?php
 
-$file = file_get_contents("input.txt");
+$file = file_get_contents("day_01_input.txt");
 $nums = explode("\n", $file);
 
 $changes = 0;
